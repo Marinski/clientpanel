@@ -23,6 +23,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 // Service imports
 import { ClientService } from './services/client.service';
 // Database import
+import { AuthService } from './services/auth.service';
 import { firebaseConfig } from '../../config/firebase-config';
 
 const appRoutes: Routes = [
@@ -59,7 +60,8 @@ const appRoutes: Routes = [
   providers: [
     AngularFireAuth,
     AngularFireDatabase,
-    ClientService
+    ClientService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
