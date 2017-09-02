@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Client } from '../../models/Client';
 
 @Component({
   selector: 'app-add-client',
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-client.component.css']
 })
 export class AddClientComponent implements OnInit {
+  client:Client = {
+    firstName:'',
+    lastName:'',
+    email:'',
+    phone:'',
+    balance:0 
+  }
+  disableBalanceOnAdd:boolean = true;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSubmit({value, valid}:{value:Client, valid:boolean}){
+    if(!valid) {
+      console.log('not valid');
+    } else {
+      console.log('valid');
+    }
+  }
 }
