@@ -1,5 +1,3 @@
-<br>
-
 <div class="row">
   <div class="col-md-6">
     <h2><i class="fa fa-users"></i> Clients</h2>
@@ -25,7 +23,7 @@
       <td>{{client.firstName}} {{client.lastName}}</td>
       <td>{{client.email}}</td>
       <td>{{client.balance | currency:"USD":true}}</td>
-      <td><a href="" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-circle-o-right"></i> Details</a></td>
+      <td><a [routerLink]="['/client/'+ client.$key]" class="btn btn-secondary btn-sm"><i class="fa fa-arrow-circle-o-right"></i> Details</a></td>
     </tr>
   </tbody>
 </table>
